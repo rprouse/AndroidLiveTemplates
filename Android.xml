@@ -140,5 +140,23 @@
       <option name="JAVA_STATEMENT" value="true" />
     </context>
   </template>
+  <template name="click" value="@OnClick(R.id.$VIEW$)&#10;void on$NAME$Click() {&#10;    $END$&#10;}" description="Add ButterKnife OnClickListener" toReformat="false" toShortenFQNames="true">
+    <variable name="VIEW" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="JAVA_EXPRESSION" value="true" />
+    </context>
+  </template>
+  <template name="inject" value="@InjectView(R.id.$VIEW$) $TYPE$ $NAME$;" description="Inject ButterKnife View" toReformat="false" toShortenFQNames="true">
+    <variable name="VIEW" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <variable name="TYPE" expression="completeSmart()" defaultValue="" alwaysStopAt="true" />
+    <variable name="NAME" expression="suggestVariableName()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="JAVA_EXPRESSION" value="true" />
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
 </templateSet>
 
