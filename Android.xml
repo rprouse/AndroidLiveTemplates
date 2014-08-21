@@ -132,5 +132,13 @@
       <option name="JAVA_DECLARATION" value="true" />
     </context>
   </template>
+  <template name="fv" value="$TYPE$ $VAR$ = ($TYPE$)findViewById(R.id.$ID$);&#10;$END$" description="Find View by Id" toReformat="true" toShortenFQNames="true">
+    <variable name="TYPE" expression="descendantClassesEnum(String)" defaultValue="" alwaysStopAt="true" />
+    <variable name="VAR" expression="suggestVariableName()" defaultValue="" alwaysStopAt="true" />
+    <variable name="ID" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
 </templateSet>
 
