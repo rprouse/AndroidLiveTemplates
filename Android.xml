@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templateSet group="Android">
-  <template name="ld" value="android.util.Log.d(&quot;$TAG$&quot;, &quot;$MSG$&quot;);" description="Send a DEBUG log message." toReformat="false" toShortenFQNames="true">
-    <variable name="TAG" expression="" defaultValue="" alwaysStopAt="true" />
+  <template name="ld" value="android.util.Log.d(TAG, &quot;$MSG$&quot;);" description="Send a DEBUG log message." toReformat="false" toShortenFQNames="true">
     <variable name="MSG" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_CODE" value="true" />
@@ -79,8 +78,7 @@
       <option name="COMPLETION" value="true" />
     </context>
   </template>
-  <template name="le" value="android.util.Log.e(&quot;$TAG$&quot;, &quot;$MSG$&quot;);" description="Send a ERROR log message." toReformat="false" toShortenFQNames="true">
-    <variable name="TAG" expression="" defaultValue="" alwaysStopAt="true" />
+  <template name="le" value="android.util.Log.e(TAG, &quot;$MSG$&quot;);" description="Send a ERROR log message." toReformat="false" toShortenFQNames="true">
     <variable name="MSG" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_CODE" value="true" />
@@ -92,8 +90,7 @@
       <option name="COMPLETION" value="true" />
     </context>
   </template>
-  <template name="lv" value="android.util.Log.v(&quot;$TAG$&quot;, &quot;$MSG$&quot;);" description="Send a VERBOSE log message." toReformat="false" toShortenFQNames="true">
-    <variable name="TAG" expression="" defaultValue="" alwaysStopAt="true" />
+  <template name="lv" value="android.util.Log.v(TAG, &quot;$MSG$&quot;);" description="Send a VERBOSE log message." toReformat="false" toShortenFQNames="true">
     <variable name="MSG" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_CODE" value="true" />
@@ -105,8 +102,7 @@
       <option name="COMPLETION" value="true" />
     </context>
   </template>
-  <template name="lw" value="android.util.Log.w(&quot;$TAG$&quot;, &quot;$MSG$&quot;);" description="Send a WARN log message." toReformat="false" toShortenFQNames="true">
-    <variable name="TAG" expression="" defaultValue="" alwaysStopAt="true" />
+  <template name="lw" value="android.util.Log.w(TAG, &quot;$MSG$&quot;);" description="Send a WARN log message." toReformat="false" toShortenFQNames="true">
     <variable name="MSG" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_CODE" value="true" />
@@ -118,8 +114,7 @@
       <option name="COMPLETION" value="true" />
     </context>
   </template>
-  <template name="li" value="android.util.Log.i(&quot;$TAG$&quot;, &quot;$MSG$&quot;);" description="Send a INFO log message." toReformat="false" toShortenFQNames="true">
-    <variable name="TAG" expression="" defaultValue="" alwaysStopAt="true" />
+  <template name="li" value="android.util.Log.i(TAG, &quot;$MSG$&quot;);" description="Send a INFO log message." toReformat="false" toShortenFQNames="true">
     <variable name="MSG" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_CODE" value="true" />
@@ -131,8 +126,7 @@
       <option name="COMPLETION" value="true" />
     </context>
   </template>
-  <template name="wtf" value="android.util.Log.wtf(&quot;$TAG$&quot;, &quot;$MSG$&quot;);" description="What a Terrible Failure: Report an exception that should never happen." toReformat="false" toShortenFQNames="true">
-    <variable name="TAG" expression="" defaultValue="" alwaysStopAt="true" />
+  <template name="wtf" value="android.util.Log.wtf(TAG, &quot;$MSG$&quot;);" description="What a Terrible Failure: Report an exception that should never happen." toReformat="false" toShortenFQNames="true">
     <variable name="MSG" expression="" defaultValue="" alwaysStopAt="true" />
     <context />
   </template>
@@ -156,6 +150,12 @@
       <option name="XSL_TEXT" value="true" />
       <option name="XML" value="true" />
       <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="tag" value="private static final String TAG = $CLASS_NAME$.class.getSimpleName();" description="Adds a log TAG to the class" toReformat="true" toShortenFQNames="true">
+    <variable name="CLASS_NAME" expression="className()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
     </context>
   </template>
 </templateSet>
